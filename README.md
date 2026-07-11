@@ -1,37 +1,37 @@
 # awesome-arxiv-multilingual
 
-多语言翻译版 arXiv 讲义与书籍的展示目录。
+A catalog website for multilingual translated arXiv lecture notes and books.
 
-## 📖 简介
+## 📖 About
 
-本网站汇集了 [PiggyPrint](https://piggyprint.gumroad.com/) 提供的多语言翻译版学术资源，涵盖量子机器学习、张量网络等前沿领域的讲义与书籍。
+This site showcases multilingual translations of academic resources from [PiggyPrint](https://piggyprint.gumroad.com/), covering cutting-edge fields such as quantum machine learning and tensor networks.
 
-## 📚 当前书目
+## 📚 Current Titles
 
-| 书名 | 翻译语言 |
-|------|---------|
+| Title | Available Languages |
+|-------|-------------------|
 | **Les Houches Lecture Notes on Tensor Networks** | Deutsch, Español, Français, Indonesia, 日本語, 한국어, Português, 中文 |
 | **Quantum machine learning — lecture notes** | العربية, Português, Français, Español, Indonesia, 中文 |
-| **The Hitchhiker's Guide to Agentic AI** | 中文 |
+| **The Hitchhiker's Guide to Agentic AI: From Foundations to Systems** | 中文 |
 
-## 🚀 部署
+## 🚀 Deployment
 
-本站使用 GitHub Pages 托管，数据驱动的静态页面架构。
+This site is hosted on GitHub Pages with a data-driven static site architecture.
 
-### 技术栈
+### Tech Stack
 
-- **纯 HTML + CSS** — 无需构建工具链
-- **data.json 数据驱动** — 加书只需修改 JSON，不碰 HTML
-- **GitHub Pages** — 免费托管，自动 HTTPS
+- **Pure HTML + CSS** — no build toolchain required
+- **data.json driven** — add a book by editing JSON only, no HTML changes
+- **GitHub Pages** — free hosting with automatic HTTPS
 
-### 添加新书
+### Adding a New Book
 
-编辑 [`data.json`](data.json)，在数组中追加：
+Edit [`data.json`](data.json) and append to the array:
 
 ```json
 {
   "id": "new-book",
-  "title": "书名",
+  "title": "Book Title",
   "languages": [
     { "name": "中文", "gumroad": "xxxxxx" },
     { "name": "English", "gumroad": "yyyyyy" }
@@ -39,12 +39,12 @@
 }
 ```
 
-提交推送后网站自动更新。
+Commit and push — the site updates automatically.
 
-## 🌐 访问
+## 🌐 Visit
 
 [https://piggyprint2025.github.io/awesome-arxiv-multilingual/](https://piggyprint2025.github.io/awesome-arxiv-multilingual/)
 
-## 📄 许可
+## 📄 License
 
-本项目仅作为展示目录，书籍版权归各自作者所有。
+This repository serves as a catalog only. The rights to all books belong to their respective authors.
