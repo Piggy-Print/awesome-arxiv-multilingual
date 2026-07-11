@@ -6,14 +6,6 @@ A catalog website for multilingual translated arXiv lecture notes and books.
 
 This site showcases multilingual translations of academic resources from [PiggyPrint](https://piggyprint.gumroad.com/), covering cutting-edge fields such as quantum machine learning and tensor networks.
 
-## 📚 Current Titles
-
-| Title | Available Languages |
-|-------|-------------------|
-| **Les Houches Lecture Notes on Tensor Networks** | Deutsch, Español, Français, Indonesia, 日本語, 한국어, Português, 中文 |
-| **Quantum machine learning — lecture notes** | العربية, Português, Français, Español, Indonesia, 中文 |
-| **The Hitchhiker's Guide to Agentic AI: From Foundations to Systems** | 中文 |
-
 ## 🚀 Deployment
 
 This site is hosted on GitHub Pages with a data-driven static site architecture.
