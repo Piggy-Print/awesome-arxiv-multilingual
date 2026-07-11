@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PiggyPrint 翻译文档</title>
+    <title>PiggyPrint Translated Docs</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>📚 PiggyPrint 翻译文档</h1>
-            <p>多语言翻译版讲义与书籍</p>
+            <h1>📚 PiggyPrint Translated Docs</h1>
+            <p>Multilingual lecture notes & books</p>
         </header>
 
         <div id="bookList">
@@ -48,7 +48,7 @@
             })
             .catch(err => {
                 document.getElementById('bookList').innerHTML =
-                    '<p class="error">⚠️ 数据加载失败，请稍后重试。</p>';
+                    '<p class="error">⚠️ Failed to load data. Please try again later.</p>';
                 console.error(err);
             });
 
