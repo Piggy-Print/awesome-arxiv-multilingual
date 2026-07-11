@@ -50,7 +50,7 @@ function renderBookList(books, showBuyBtn = false) {
   }).join('\n');
 }
 
-function pageShell(title, desc, body, langPages) {
+function pageShell(title, desc, body, langPages, cssPath = 'style.css') {
   const langLinks = langPages
     ? `<nav class="lang-nav" id="langNav">
                     <span class="nav-label">Browse by language:</span>
@@ -85,7 +85,7 @@ function pageShell(title, desc, body, langPages) {
       "publisher": { "@type": "Organization", "name": "PiggyPrint" }
     }
     </script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="${cssPath}">
 </head>
 <body>
     <div class="container">
@@ -147,7 +147,8 @@ ALL_LANGS.forEach(lang => {
     `${lang.name} — PiggyPrint Translated Docs`,
     `Browse ${lang.name} translations of PiggyPrint's multilingual books on quantum ML, tensor networks, and agentic AI.`,
     langBody,
-    false
+    false,
+    '../style.css'
   );
 
   fs.writeFileSync(`lang/${lang.code}.html`, html);
