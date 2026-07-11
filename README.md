@@ -43,7 +43,7 @@ Commit and push — the site updates automatically.
 
 ## 🌐 Visit
 
-[https://piggyprint2025.github.io/awesome-arxiv-multilingual/](https://piggyprint2025.github.io/awesome-arxiv-multilingual/)
+[https://piggy-print.github.io/awesome-arxiv-multilingual/](https://piggy-print.github.io/awesome-arxiv-multilingual/)
 
 ## 📄 License
 
