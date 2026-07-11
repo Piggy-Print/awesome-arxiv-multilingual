@@ -52,7 +52,7 @@
                 document.getElementById('langNav').innerHTML = `
                     <span class="nav-label">${navLabel}</span>
                     ${allLangs.map(lang => `
-                        <a href="lang.html?code=${encodeURIComponent(lang.code || lang.name)}" class="nav-btn">
+                        <a href="lang.html?code=${encodeURIComponent(lang.code || lang.name)}" class="lang-btn">
                             ${escapeHtml(lang.name)} (${lang.count})
                         </a>
                     `).join('')}
