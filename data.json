@@ -1,0 +1,35 @@
+[
+  {
+    "id": "tensor-networks",
+    "title": "Les Houches Lecture Notes on Tensor Networks",
+    "languages": [
+      { "name": "Deutsch", "gumroad": "rimqsa" },
+      { "name": "Español", "gumroad": "bhrqjr" },
+      { "name": "Français", "gumroad": "nmulku" },
+      { "name": "Indonesia", "gumroad": "yvaknn" },
+      { "name": "日本語", "gumroad": "ilmeuu" },
+      { "name": "한국어", "gumroad": "trkwfr" },
+      { "name": "Português", "gumroad": "lvggm" },
+      { "name": "中文", "gumroad": "nromc" }
+    ]
+  },
+  {
+    "id": "quantum-ml",
+    "title": "Quantum machine learning — lecture notes",
+    "languages": [
+      { "name": "العربية", "gumroad": "vcsmvf" },
+      { "name": "Português", "gumroad": "rnsnsl" },
+      { "name": "Français", "gumroad": "vjvilq" },
+      { "name": "Español", "gumroad": "hnrfzs" },
+      { "name": "Indonesia", "gumroad": "bzyelu" },
+      { "name": "中文", "gumroad": "wmpxcj" }
+    ]
+  },
+  {
+    "id": "agentic-ai",
+    "title": "The Hitchhiker's Guide to Agentic AI: From Foundations to Systems",
+    "languages": [
+      { "name": "中文", "gumroad": "meisqz" }
+    ]
+  }
+]
