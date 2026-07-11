@@ -31,18 +31,19 @@
             document.getElementById('bookList').innerHTML =
                 '<p class="error">⚠️ No language specified. <a href="index.html">Go back to home</a>.</p>';
         } else {
-            fetch('data.json')
+            // Cache-bust: always fetch fresh data
+            fetch('data.json?' + Date.now())
                 .then(res => {
                     if (!res.ok) throw new Error('Failed to load data');
                     return res.json();
                 })
                 .then(books => {
-                    // Find the language name from any book that has it
+                    // Find the language display name — try code first, then name
                     let langName = langCode;
                     for (const book of books) {
-                        const found = book.languages.find(l => l.code === langCode);
-                        if (found) {
-                            langName = found.name;
+                        const match = book.languages.find(l => l.code === langCode || l.name === langCode);
+                        if (match) {
+                            langName = match.name;
                             break;
                         }
                     }
@@ -50,7 +51,7 @@
                     // Filter books that have this language
                     const filtered = books
                         .map(book => {
-                            const match = book.languages.find(l => l.code === langCode);
+                            const match = book.languages.find(l => l.code === langCode || l.name === langCode);
                             return match ? { title: book.title, gumroad: match.gumroad, langName: match.name } : null;
                         })
                         .filter(Boolean);
@@ -58,7 +59,7 @@
                     document.title = `${langName} — PiggyPrint Translated Docs`;
                     document.getElementById('pageTitle').textContent = `📖 ${langName}`;
                     document.getElementById('pageSubtitle').textContent =
-                        `${filtered.length} book${filtered.length > 1 ? 's' : ''} available`;
+                        `${filtered.length} book${filtered.length !== 1 ? 's' : ''} available`;
 
                     const container = document.getElementById('bookList');
                     if (filtered.length === 0) {
