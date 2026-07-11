@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PiggyPrint Translated Docs — Multilingual AI & Science Books</title>
+    <title>PiggyPrint Translated Docs — Multilingual AI &amp; Science Books</title>
     <meta name="description" content="Browse multilingual translated lecture notes on quantum machine learning, tensor networks, and agentic AI. Available in 中文, Español, Français, Deutsch, 日本語, 한국어, Português, العربية, Indonesia.">
-    <meta name="keywords" content="quantum machine learning, tensor networks, agentic AI, multilingual books, translated lecture notes, PiggyPrint">
     <link rel="canonical" href="https://piggy-print.github.io/awesome-arxiv-multilingual/">
     <!-- Open Graph -->
-    <meta property="og:title" content="PiggyPrint Translated Docs — Multilingual AI & Science Books">
-    <meta property="og:description" content="Multilingual translated lecture notes on quantum ML, tensor networks, and agentic AI.">
+    <meta property="og:title" content="PiggyPrint Translated Docs — Multilingual AI &amp; Science Books">
+    <meta property="og:description" content="Browse multilingual translated lecture notes on quantum machine learning, tensor networks, and agentic AI. Available in 中文, Español, Français, Deutsch, 日本語, 한국어, Português, العربية, Indonesia.">
     <meta property="og:url" content="https://piggy-print.github.io/awesome-arxiv-multilingual/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="PiggyPrint Translated Docs">
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="PiggyPrint Translated Docs">
-    <meta name="twitter:description" content="Multilingual translated lecture notes on quantum ML, tensor networks, and agentic AI.">
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -26,10 +22,7 @@
       "description": "Multilingual translated lecture notes on quantum machine learning, tensor networks, and agentic AI.",
       "url": "https://piggy-print.github.io/awesome-arxiv-multilingual/",
       "inLanguage": ["en", "zh", "es", "fr", "de", "ja", "ko", "pt", "ar", "id"],
-      "publisher": {
-        "@type": "Organization",
-        "name": "PiggyPrint"
-      }
+      "publisher": { "@type": "Organization", "name": "PiggyPrint" }
     }
     </script>
     <link rel="stylesheet" href="style.css">
@@ -40,78 +33,53 @@
             <h1>📚 PiggyPrint Translated Docs</h1>
             <p>Multilingual lecture notes & books</p>
         </header>
-
         <nav class="lang-nav" id="langNav">
-            <!-- language quick links rendered by JS -->
-        </nav>
-
+                    <span class="nav-label">Browse by language:</span>
+                    <a href="lang/zh.html" class="lang-btn">中文 (3)</a>
+                    <a href="lang/es.html" class="lang-btn">Español (2)</a>
+                    <a href="lang/fr.html" class="lang-btn">Français (2)</a>
+                    <a href="lang/id.html" class="lang-btn">Indonesia (2)</a>
+                    <a href="lang/pt.html" class="lang-btn">Português (2)</a>
+                    <a href="lang/de.html" class="lang-btn">Deutsch (1)</a>
+                    <a href="lang/ar.html" class="lang-btn">العربية (1)</a>
+                    <a href="lang/ko.html" class="lang-btn">한국어 (1)</a>
+                    <a href="lang/ja.html" class="lang-btn">日本語 (1)</a>
+                </nav>
         <div id="bookList">
-            <!-- rendered by JavaScript -->
+                                <div class="book-card">
+                        <h2>Les Houches Lecture Notes on Tensor Networks</h2>
+                        <div class="lang-links">
+                            <a href="lang/de.html" target="_blank" rel="noopener noreferrer" class="lang-btn">Deutsch</a>
+                            <a href="lang/es.html" target="_blank" rel="noopener noreferrer" class="lang-btn">Español</a>
+                            <a href="lang/fr.html" target="_blank" rel="noopener noreferrer" class="lang-btn">Français</a>
+                            <a href="lang/id.html" target="_blank" rel="noopener noreferrer" class="lang-btn">Indonesia</a>
+                            <a href="lang/ja.html" target="_blank" rel="noopener noreferrer" class="lang-btn">日本語</a>
+                            <a href="lang/ko.html" target="_blank" rel="noopener noreferrer" class="lang-btn">한국어</a>
+                            <a href="lang/pt.html" target="_blank" rel="noopener noreferrer" class="lang-btn">Português</a>
+                            <a href="lang/zh.html" target="_blank" rel="noopener noreferrer" class="lang-btn">中文</a>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <h2>Quantum machine learning — lecture notes</h2>
+                        <div class="lang-links">
+                            <a href="lang/ar.html" target="_blank" rel="noopener noreferrer" class="lang-btn">العربية</a>
+                            <a href="lang/pt.html" target="_blank" rel="noopener noreferrer" class="lang-btn">Português</a>
+                            <a href="lang/fr.html" target="_blank" rel="noopener noreferrer" class="lang-btn">Français</a>
+                            <a href="lang/es.html" target="_blank" rel="noopener noreferrer" class="lang-btn">Español</a>
+                            <a href="lang/id.html" target="_blank" rel="noopener noreferrer" class="lang-btn">Indonesia</a>
+                            <a href="lang/zh.html" target="_blank" rel="noopener noreferrer" class="lang-btn">中文</a>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <h2>The Hitchhiker's Guide to Agentic AI: From Foundations to Systems</h2>
+                        <div class="lang-links">
+                            <a href="lang/zh.html" target="_blank" rel="noopener noreferrer" class="lang-btn">中文</a>
+                        </div>
+                    </div>
         </div>
-
         <footer>
             <p>Powered by <a href="https://piggyprint.gumroad.com/" target="_blank">PiggyPrint</a></p>
         </footer>
     </div>
-
-    <script>
-        // Cache-bust: append a timestamp so we always get fresh data.json
-        fetch('data.json?' + Date.now())
-            .then(res => {
-                if (!res.ok) throw new Error('Failed to load data');
-                return res.json();
-            })
-            .then(books => {
-                // Collect all unique languages across books
-                const langMap = new Map();
-                books.forEach(book => {
-                    book.languages.forEach(lang => {
-                        const key = lang.code || lang.name; // fallback if code missing
-                        if (!langMap.has(key)) {
-                            langMap.set(key, { code: lang.code, name: lang.name, count: 0 });
-                        }
-                        langMap.get(key).count++;
-                    });
-                });
-                const allLangs = [...langMap.values()];
-
-                // Render language nav
-                const navLabel = escapeHtml('Browse by language:');
-                document.getElementById('langNav').innerHTML = `
-                    <span class="nav-label">${navLabel}</span>
-                    ${allLangs.map(lang => `
-                        <a href="lang.html?code=${encodeURIComponent(lang.code || lang.name)}" class="lang-btn">
-                            ${escapeHtml(lang.name)} (${lang.count})
-                        </a>
-                    `).join('')}
-                `;
-
-                // Render book list
-                const container = document.getElementById('bookList');
-                container.innerHTML = books.map(book => `
-                    <div class="book-card">
-                        <h2>${escapeHtml(book.title)}</h2>
-                        <div class="lang-links">
-                            ${book.languages.map(lang => `
-                                <a href="lang.html?code=${encodeURIComponent(lang.code || lang.name)}" class="lang-btn">
-                                    ${escapeHtml(lang.name)}
-                                </a>
-                            `).join('')}
-                        </div>
-                    </div>
-                `).join('');
-            })
-            .catch(err => {
-                document.getElementById('bookList').innerHTML =
-                    '<p class="error">⚠️ Failed to load data. Please try again later.</p>';
-                console.error(err);
-            });
-
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
-        }
-    </script>
 </body>
 </html>
