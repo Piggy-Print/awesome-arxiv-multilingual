@@ -13,8 +13,12 @@
             <p>Multilingual lecture notes & books</p>
         </header>
 
+        <nav class="lang-nav" id="langNav">
+            <!-- language quick links rendered by JS -->
+        </nav>
+
         <div id="bookList">
-            <!-- 由 JavaScript 动态渲染 -->
+            <!-- rendered by JavaScript -->
         </div>
 
         <footer>
@@ -29,16 +33,36 @@
                 return res.json();
             })
             .then(books => {
+                // Collect all unique languages across books
+                const langMap = new Map();
+                books.forEach(book => {
+                    book.languages.forEach(lang => {
+                        if (!langMap.has(lang.code)) {
+                            langMap.set(lang.code, { code: lang.code, name: lang.name, count: 0 });
+                        }
+                        langMap.get(lang.code).count++;
+                    });
+                });
+                const allLangs = [...langMap.values()];
+
+                // Render language nav
+                document.getElementById('langNav').innerHTML = `
+                    <span class="nav-label">Browse by language:</span>
+                    ${allLangs.map(lang => `
+                        <a href="lang.html?code=${lang.code}" class="nav-btn">
+                            ${escapeHtml(lang.name)} (${lang.count})
+                        </a>
+                    `).join('')}
+                `;
+
+                // Render book list
                 const container = document.getElementById('bookList');
                 container.innerHTML = books.map(book => `
                     <div class="book-card">
                         <h2>${escapeHtml(book.title)}</h2>
                         <div class="lang-links">
                             ${book.languages.map(lang => `
-                                <a href="https://piggyprint.gumroad.com/l/${lang.gumroad}"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="lang-btn">
+                                <a href="lang.html?code=${lang.code}" class="lang-btn">
                                     ${escapeHtml(lang.name)}
                                 </a>
                             `).join('')}
