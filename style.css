@@ -135,20 +135,52 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Buy button on language pages */
-.buy-btn {
-    display: inline-block;
-    padding: 0.6rem 1.5rem;
-    background: #2b8a3e;
-    color: white;
-    border-radius: 40px;
+/* Buy link (table style) */
+.buy-link {
+    color: #2b8a3e;
     text-decoration: none;
     font-weight: 600;
-    transition: background 0.2s;
+    white-space: nowrap;
+    font-size: 0.9rem;
 }
 
-.buy-btn:hover {
-    background: #1e6b2f;
+.buy-link:hover {
+    text-decoration: underline;
+}
+
+/* Language table (clean minimal) */
+.book-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.book-table tr {
+    border-bottom: 1px solid #eee;
+}
+
+.book-table tr:last-child {
+    border-bottom: none;
+}
+
+.book-table td {
+    padding: 0.9rem 1.2rem;
+}
+
+.book-table .title-cell {
+    font-weight: 500;
+    color: #1a1a2e;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.book-table .buy-cell {
+    text-align: right;
+    white-space: nowrap;
+    width: 1%;
 }
 
 /* Error */

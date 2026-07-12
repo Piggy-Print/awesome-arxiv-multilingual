@@ -31,23 +31,12 @@ function renderNav() {
   ).join('\n                    ');
 }
 
-function renderBookList(books, showBuyBtn = false) {
-  return books.map(book => {
-    const btns = book.languages.map(l => {
-      const href = showBuyBtn
-        ? `https://piggyprint.gumroad.com/l/${l.gumroad}`
-        : `lang/${l.code}.html`;
-      const cls = showBuyBtn ? 'buy-btn' : 'lang-btn';
-      const label = showBuyBtn ? '🛒 Buy — $9.99' : esc(l.name);
-      return `<a href="${href}" target="_blank" rel="noopener noreferrer" class="${cls}">${label}</a>`;
-    }).join('\n                            ');
-    return `                    <div class="book-card">
-                        <h2>${esc(book.title)}</h2>
-                        <div class="lang-links">
-                            ${btns}
-                        </div>
-                    </div>`;
-  }).join('\n');
+// Render language buttons under each book card on index.html
+// These link directly to Gumroad (not to language sub-pages)
+function renderGumroadBtns(book) {
+  return book.languages.map(l =>
+    `<a href="https://piggyprint.gumroad.com/l/${l.gumroad}" target="_blank" rel="noopener noreferrer" class="lang-btn">${esc(l.name)}</a>`
+  ).join('\n                            ');
 }
 
 function pageShell(title, desc, body, langPages, cssPath = 'style.css') {
@@ -108,7 +97,14 @@ function pageShell(title, desc, body, langPages, cssPath = 'style.css') {
 const indexBody = {
   header: `<h1>📚 PiggyPrint Translated Docs</h1>
             <p>Multilingual lecture notes & books</p>`,
-  content: renderBookList(DATA, false)
+  content: DATA.map(book =>
+    `                    <div class="book-card">
+                        <h2>${esc(book.title)}</h2>
+                        <div class="lang-links">
+                            ${renderGumroadBtns(book)}
+                        </div>
+                    </div>`
+  ).join('\n')
 };
 
 fs.writeFileSync('index.html', pageShell(
@@ -131,16 +127,22 @@ ALL_LANGS.forEach(lang => {
     })
     .filter(Boolean);
 
+  const rows = matching.map(book =>
+    `                        <tr>
+                            <td class="title-cell">${esc(book.title)}</td>
+                            <td class="buy-cell"><a href="https://piggyprint.gumroad.com/l/${book.gumroad}" target="_blank" rel="noopener noreferrer" class="buy-link">Buy</a></td>
+                        </tr>`
+  ).join('\n');
+
   const langBody = {
     header: `<a href="../index.html" class="back">← All Languages</a>
             <h1>📖 ${esc(lang.name)}</h1>
             <p>${matching.length} book${matching.length !== 1 ? 's' : ''} available</p>`,
-    content: matching.map(book =>
-      `                    <div class="book-card">
-                        <h2>${esc(book.title)}</h2>
-                        <a href="https://piggyprint.gumroad.com/l/${book.gumroad}" target="_blank" rel="noopener noreferrer" class="buy-btn">🛒 Buy — $9.99</a>
-                    </div>`
-    ).join('\n')
+    content: `<table class="book-table">
+                        <tbody>
+${rows}
+                        </tbody>
+                    </table>`
   };
 
   const html = pageShell(
