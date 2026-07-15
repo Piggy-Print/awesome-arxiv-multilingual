@@ -1,5 +1,33 @@
 [
   {
+    "id": "strong-cp-axion",
+    "title": "Strong CP and the QCD Axion: Lecture Notes via Effective Field Theory",
+    "languages": [
+      { "code": "de", "name": "Deutsch", "gumroad": "djtxvl" },
+      { "code": "es", "name": "Español", "gumroad": "qgqeef" },
+      { "code": "fr", "name": "Français", "gumroad": "scotqy" },
+      { "code": "id", "name": "Indonesia", "gumroad": "yfksat" },
+      { "code": "ja", "name": "日本語", "gumroad": "xyrwhf" },
+      { "code": "ko", "name": "한국어", "gumroad": "ccgrwl" },
+      { "code": "pt", "name": "Português", "gumroad": "mmgvhr" },
+      { "code": "zh", "name": "中文", "gumroad": "ppwfst" }
+    ]
+  },
+  {
+    "id": "quantum-tensor-networks",
+    "title": "Who can compete with quantum computers? Lecture notes on quantum inspired tensor networks computational techniques",
+    "languages": [
+      { "code": "de", "name": "Deutsch", "gumroad": "ncaxt" },
+      { "code": "es", "name": "Español", "gumroad": "nsgrzu" },
+      { "code": "fr", "name": "Français", "gumroad": "ghrenz" },
+      { "code": "id", "name": "Indonesia", "gumroad": "ryzluq" },
+      { "code": "ja", "name": "日本語", "gumroad": "zbryaj" },
+      { "code": "ko", "name": "한국어", "gumroad": "mvsyto" },
+      { "code": "pt", "name": "Português", "gumroad": "lxncu" },
+      { "code": "zh", "name": "中文", "gumroad": "suflnw" }
+    ]
+  },
+  {
     "id": "tensor-networks",
     "title": "Les Houches Lecture Notes on Tensor Networks",
     "languages": [

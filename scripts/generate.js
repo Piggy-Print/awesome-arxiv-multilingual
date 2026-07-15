@@ -109,7 +109,7 @@ const indexBody = {
 
 fs.writeFileSync('index.html', pageShell(
   'PiggyPrint Translated Docs — Multilingual AI & Science Books',
-  'Browse multilingual translated lecture notes on quantum machine learning, tensor networks, and agentic AI. Available in 中文, Español, Français, Deutsch, 日本語, 한국어, Português, العربية, Indonesia.',
+  'Browse multilingual translated lecture notes on quantum computing, tensor networks, quantum machine learning, agentic AI, and strong CP / QCD axion physics. Available in 中文, Español, Français, Deutsch, 日本語, 한국어, Português, العربية, Indonesia.',
   indexBody,
   true
 ));
@@ -147,7 +147,7 @@ ${rows}
 
   const html = pageShell(
     `${lang.name} — PiggyPrint Translated Docs`,
-    `Browse ${lang.name} translations of PiggyPrint's multilingual books on quantum ML, tensor networks, and agentic AI.`,
+    `Browse ${lang.name} translations of PiggyPrint's multilingual books on quantum computing, tensor networks, quantum ML, agentic AI, and strong CP physics.`,
     langBody,
     false,
     '../style.css'
